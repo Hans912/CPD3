@@ -173,7 +173,7 @@ def generate_nav_links(folder_path):
     nav_content = '<ul class="dropdown-content">\n'
     for file in html_files:
         file_name = file.replace('.html', '')
-        nav_content += f'  <li><a href="mens_team/{file.replace(" ", "%")}">{file_name}</a></li>\n'
+        nav_content += f'  <li><a href="mens_team/{file}">{file_name}</a></li>\n'
     nav_content += '</ul>\n'
 
     return nav_content
@@ -233,7 +233,7 @@ def main():
       # read data from file
       athlete_data = process_athlete_data(folder_path+file)
       # using data to generate templated athlete page
-      gen_athlete_page(athlete_data, folder_path+file.replace(".csv",".html"))
+      gen_athlete_page(athlete_data, folder_path+file.replace(".csv",".html").replace(" ", ""))
 
       # read data from file
       # athlete_data2 = process_athlete_data(filename2)
