@@ -173,7 +173,7 @@ def generate_nav_links(folder_path):
     nav_content = '<ul class="dropdown-content">\n'
     for file in html_files:
         file_name = file.replace('.html', '')
-        nav_content += f'  <li><a href="mens_team/{file}">{file_name}</a></li>\n'
+        nav_content += f'  <li><a href="mens_team/{file.replace(" ", "%")}">{file_name}</a></li>\n'
     nav_content += '</ul>\n'
 
     return nav_content
