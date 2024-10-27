@@ -102,6 +102,7 @@ body{
 
 /* Optional: Close the dropdown when clicking outside (accessibility-friendly) */
 button:focus {
+    background-color: #ddd; /* Optional visual feedback */
     outline: none;
 }
 
@@ -156,7 +157,7 @@ button:focus {
 }
 
 a{
-    color: #007bff;
+    color: #006FE6;
     text-decoration: none;
 }
 
@@ -200,7 +201,7 @@ th, td {
 
 th {
     background-color: #D2B48C;
-    color: white;
+    color: black;
     font-weight: bold;
 }
 
