@@ -114,6 +114,11 @@ button:focus {
     background-color: #ddd;
 }
 
+.dropdown-content a:focus {
+    background-color: #ddd; /* Optional visual feedback */
+    outline: none;
+}
+
 .skip{
     position: absolute;
     top: -500px;
