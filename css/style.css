@@ -67,9 +67,7 @@ body{
 
 /* Hide the dropdown links by default */
 .dropdown-content {
-    display: block;
-    opacity: 0;
-    pointer-events: none;
+    display: none;
     position: absolute;
     background-color: #f1f1f1;
     min-width: 160px;
@@ -94,10 +92,12 @@ body{
 }
 
 /* Show the dropdown on :focus-within (when the button or links are clicked) */
-.dropdown:focus-within .dropdown-content {
+/* .dropdown:focus-within .dropdown-content {
     display: block;
-    opacity: 1;
-    pointer-events: auto;
+} */
+
+.dropdown-content.visible {
+    display: block;
 }
 
 /* Optional: Close the dropdown when clicking outside (accessibility-friendly) */
