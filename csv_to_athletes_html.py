@@ -49,7 +49,7 @@ def gen_athlete_page(data, outfile):
    <html lang="en">
    <head>
       <meta charset="UTF-8">
-      <meta name="viewport" content="width=375, initial-scale=1.0">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
        <!-- Get your own FontAwesome ID -->
        <script src="https://kit.fontawesome.com/7703f3cfbe.js" crossorigin="anonymous"></script>
 
@@ -159,7 +159,7 @@ def gen_athlete_page(data, outfile):
             2552 North Maple Road<br>
             Ann Arbor, MI 48103<br>   
             <a href = "https://sites.google.com/aaps.k12.mi.us/skylinecrosscountry2021/home">XC Skyline Page</a><br>
-            Follow us on Instagram <a href = "https://www.instagram.com/a2skylinexc/"><i class="fa-brands fa-instagram" aria-label="Instagram"></i>
+            <a href = "https://www.instagram.com/a2skylinexc/">Follow us on Instagram <i class="fa-brands fa-instagram" aria-label="Instagram"></i></a>
          </footer>
       </div>
    </body>
