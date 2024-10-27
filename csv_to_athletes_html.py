@@ -65,30 +65,36 @@ def gen_athlete_page(data, outfile):
    </head>
    <body>
    <a class= "skip" href = "#main">Skip to Main Content</a>
-   <nav>
-      <ul class="top_link">
-         <li id="home"><i class="fa-solid fa-house"></i> <a href="../index.html">Home Page</a></li>
-         <li><a href="mens.html">Men's Team</a></li>
-         <li><a href="womens.html">Women's Team</a></li>
-      </ul>
-   </nav>
-   <header>
-      <!--Athlete would input headshot-->
-       <h1>{data["name"]}</h1>
-      <img src="../images/profiles/{data["athlete_id"]}.jpg" alt="Athlete headshot" width="200"> 
-   </header>
-   <main id = "main">
-      <section id= "athlete-sr-table">
-         <h2>Athlete's Seasonal Records (SR) per Year</h2>
-            <table>
-                  <thead>
-                     <tr>
-                        <th> Year </th>
-                        <th> Season Record (SR)</th>
-                     </tr>
-                  </thead>
-                  <tbody>
-                  '''
+   <div class="grid"> 
+      <header>
+         <div class="logo"><h1>PROGRUN</h1></div>
+         <nav class="top_nav">
+            <ul class="top_link">
+               <li id="home"><i class="fa-solid fa-house"></i> <a href="../index.html">Home Page</a></li>
+               <li><a href="mens.html">Men's Team</a></li>
+               <li><a href="womens.html">Women's Team</a></li>
+            </ul>
+         </nav>
+      </header>
+      <div>
+         <section id="athlete_name">
+            <!--Athlete would input headshot-->
+            <h2>{data["name"]}</h2>
+            <img src="../images/profiles/{data["athlete_id"]}.jpg" alt="Athlete headshot" width="200"> 
+         </section>
+      </div>
+         <main id = "main">
+            <section id= "athlete-sr-table">
+               <h3>Athlete's Seasonal Records (SR) per Year</h3>
+                  <table>
+                        <thead>
+                           <tr>
+                              <th> Year </th>
+                              <th> Season Record (SR)</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                        '''
    
    for sr in data["season_records"]:
       sr_row = f'''
@@ -104,9 +110,9 @@ def gen_athlete_page(data, outfile):
                   </table>
                      </section>
 
-                        <h2>Race Results</h2>
 
                         <section id="athlete-result-table">
+                        <h3>Race Results</h3>
                            
 
                            <table id="athlete-table">
@@ -142,23 +148,22 @@ def gen_athlete_page(data, outfile):
                         </table>
                      </section>
                      <section id = "gallery">
-                     <h2>Gallery</h2>
-                      </section>
+                     <h3>Gallery</h3>
+                     <p><i class="fa-solid fa-person-digging"></i></i> Under construction :) <i class="fa-solid fa-person-digging"></i></p>
+                     </section>
                      </main>
-                     <footer>
-                     <p>
-                     Skyline High School<br>
-                     <address>
-                     2552 North Maple Road<br>
-                     Ann Arbor, MI 48103<br><br>
-
-                     <a href = "https://sites.google.com/aaps.k12.mi.us/skylinecrosscountry2021/home">XC Skyline Page</a><br>
-                    Follow us on Instagram <a href = "https://www.instagram.com/a2skylinexc/"><i class="fa-brands fa-instagram" aria-label="Instagram"></i>  </a> 
-
-
-                     </footer>
-               </body>
-         </html>
+         <footer class="footer">
+            <p>
+            Skyline High School<br>
+            <address>
+            2552 North Maple Road<br>
+            Ann Arbor, MI 48103<br>   
+            <a href = "https://sites.google.com/aaps.k12.mi.us/skylinecrosscountry2021/home">XC Skyline Page</a><br>
+            Follow us on Instagram <a href = "https://www.instagram.com/a2skylinexc/"><i class="fa-brands fa-instagram" aria-label="Instagram"></i>
+         </footer>
+      </div>
+   </body>
+   </html>
    '''
 
    with open(outfile, 'w') as output:
