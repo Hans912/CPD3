@@ -64,8 +64,8 @@ def gen_athlete_page(data, outfile):
       <title>{data["name"]}</title>
    </head>
    <body>
-   <a class= "skip" href = "#main">Skip to Main Content</a>
    <div class="grid"> 
+   <a class= "skip" href = "#main">Skip to Main Content</a>
       <header>
          <div class="logo"><h1>PROGRUN</h1></div>
          <nav class="top_nav">

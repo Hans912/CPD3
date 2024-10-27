@@ -91,11 +91,6 @@ body{
     background-color: #ddd;
 }
 
-/* Show the dropdown on :focus-within (when the button or links are clicked) */
-/* .dropdown:focus-within .dropdown-content {
-    display: block;
-} */
-
 .dropdown-content.visible {
     display: block;
 }
@@ -122,13 +117,21 @@ button:focus {
 
 .skip{
     position: absolute;
-    top: -500px;
+    top: -700px; /* Initially off-screen */
+    left: 10px;  /* Adjust position as needed */
     background-color: #D2B48C;
     text-decoration: none;
+    padding: 10px 20px; /* Add padding for better accessibility */
+    border-radius: 5px;
+    font-size: 16px;
+    color: black;
+    z-index: 1001;
 }
 
 .skip:focus{
   top:10px;
+  outline: 2px solid #333; /* Optional: Add focus outline for accessibility */
+    z-index: 1001;
 }
 
 .top_link li:nth-last-child(1){
@@ -154,6 +157,10 @@ button:focus {
 
 #home a{
     color: #000;
+}
+
+#home a:focus{
+    outline: 2px solid #333;
 }
 
 a{
