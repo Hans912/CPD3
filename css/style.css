@@ -75,7 +75,6 @@ body{
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
-    transition: opacity 0.2s ease-in-out;
 }
 
 /* Style the links inside the dropdown */
@@ -96,7 +95,7 @@ body{
 
 /* Show the dropdown on :focus-within (when the button or links are clicked) */
 .dropdown:focus-within .dropdown-content {
-    /* display: block; */
+    display: block;
     opacity: 1;
     pointer-events: auto;
 }
