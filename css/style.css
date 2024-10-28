@@ -237,3 +237,63 @@ tr:hover {
         transition: none !important;
     }
 }
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #333;
+        color: white;
+    }
+
+    header {
+        background-color: #555;
+    }
+
+    .dropdown button {
+        background-color: #444;
+        color: white;
+    }
+
+    .dropdown-content {
+        background-color: #666;
+    }
+
+    th {
+        background-color: #444;
+        color: white;
+    }
+
+    #main section {
+        background-color: #444;
+        box-shadow: 0 2px 8px rgba(255, 255, 255, 0.1);
+    }
+    #main {
+        background-color: #333;
+    }
+
+    a {
+        color: #66ccff;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    .footer {
+        background-color: #444;
+        border-top: 4px solid #999;
+    }
+
+    *{
+        color: white;
+    }
+
+    #main section h3{
+        color: white;
+    }
+
+    #home a{
+        color: white;
+    }
+
+
+}
