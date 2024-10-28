@@ -40,7 +40,7 @@ img{
 body{
     background-color: #FAF9F6;
     margin: 0;
-    height: 100vh; /* Full height of the viewport */
+    height: 100vh;
 }
 
 
@@ -229,4 +229,11 @@ tr:hover {
     text-align: center;
     margin-top: 30px;
     border-top: 4px solid #333;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    /* Disable all transitions for users with reduced motion preference */
+    * {
+        transition: none !important;
+    }
 }
