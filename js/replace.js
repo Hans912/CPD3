@@ -6,6 +6,7 @@ document.querySelectorAll('img').forEach(img => {
     };
     });
 
+
 document.querySelectorAll('#light').forEach(anchor => {
     const imgUrl = anchor.href; // Get the href attribute of the anchor
     const testImage = new Image();
