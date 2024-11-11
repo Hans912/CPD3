@@ -57,6 +57,7 @@ def gen_athlete_page(data, outfile):
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Andika:ital,wght@0,400;0,700;1,400;1,700&family=Jacques+Francois&family=Oxanium:wght@200..800&display=swap" rel="stylesheet">
 
+      <link href="../dist/css/lightbox.css" rel="stylesheet">
       <link rel = "stylesheet" href = "../css/reset.css">
       <link rel = "stylesheet" href = "../css/style.css">
       
@@ -80,7 +81,9 @@ def gen_athlete_page(data, outfile):
          <section id="athlete_name">
             <!--Athlete would input headshot-->
             <h2>{data["name"]}</h2>
-            <img src="../images/profiles/{data["athlete_id"]}.jpg" alt="Athlete headshot" width="200"> 
+            <a href = "../images/profiles/{data["athlete_id"]}.jpg" target="_blank" data-lightbox="athlete" data-title="{data["name"]}" data-alt="Athlete headshot" aria-label="Athlete Headshot" id="light">
+               <img src="../images/profiles/{data["athlete_id"]}.jpg" alt="Athlete headshot" width="200" id="prof_pic"> 
+            </a>
          </section>
       </div>
          <main id = "main">
@@ -162,6 +165,8 @@ def gen_athlete_page(data, outfile):
             <a href = "https://www.instagram.com/a2skylinexc/">Follow us on Instagram <i class="fa-brands fa-instagram" aria-label="Instagram"></i></a>
          </footer>
       </div>
+      <script src="../dist/js/lightbox-plus-jquery.js"></script>
+      <script src="../js/replace.js"></script>
    </body>
    </html>
    '''
@@ -247,21 +252,21 @@ def main():
 
 
    # Define the folder path
-   folder_path2 = 'womens_team/'
+   folder_path2 = 'CPD3/womens_team/'
    # Get all csv files in the folder
-   csv_files = glob.glob(os.path.join(folder_path2, '*.csv'))
+   csv_files2 = glob.glob(os.path.join(folder_path2, '*.csv'))
 
    # Extract just the file names (without the full path)
-   csv_file_names = [os.path.basename(file) for file in csv_files]
+   csv_file_names2 = [os.path.basename(file2) for file2 in csv_files2]
 
    # Output the list of CSV file names
-   print(csv_file_names)
-   for file in csv_file_names:
+   print(csv_file_names2)
+   for file2 in csv_file_names2:
 
       # read data from file
-      athlete_data = process_athlete_data("womens_team/"+file)
+      athlete_data2 = process_athlete_data(folder_path2+file2)
       # using data to generate templated athlete page
-      gen_athlete_page(athlete_data, "womens_team/"+file.replace(".csv",".html"))
+      gen_athlete_page(athlete_data2, folder_path2+file.replace(".csv",".html").replace(" ", ""))
 
       # read data from file
       # athlete_data2 = process_athlete_data(filename2)

@@ -98,7 +98,6 @@ body{
 /* Optional: Close the dropdown when clicking outside (accessibility-friendly) */
 button:focus {
     background-color: #ddd; /* Optional visual feedback */
-    outline: none;
 }
 
 .dropdown-content  a {
@@ -213,7 +212,7 @@ th {
 }
 
 tr:hover {
-    background-color: #f1f1f1;
+    background-color: #CDCDCD;
 }
 
 #gallery p {
@@ -231,6 +230,10 @@ tr:hover {
     border-top: 4px solid #333;
 }
 
+.lb-close:focus{
+    outline: 2px solid white;
+}
+
 @media (prefers-reduced-motion: reduce) {
     /* Disable all transitions for users with reduced motion preference */
     * {
@@ -239,6 +242,25 @@ tr:hover {
 }
 
 @media (prefers-color-scheme: dark) {
+    .skip{
+        position: absolute;
+        top: -700px; /* Initially off-screen */
+        left: 10px;  /* Adjust position as needed */
+        background-color: #333;
+        text-decoration: none;
+        padding: 10px 20px; /* Add padding for better accessibility */
+        border-radius: 5px;
+        font-size: 16px;
+        color: white;
+        z-index: 1001;
+    }
+    
+    .skip:focus{
+      top:10px;
+      outline: 2px solid white; /* Optional: Add focus outline for accessibility */
+        z-index: 1001;
+    }
+
     body {
         background-color: #333;
         color: white;
@@ -255,6 +277,10 @@ tr:hover {
 
     .dropdown-content {
         background-color: #666;
+    }
+
+    button:focus {
+        background-color: #666; /* Optional visual feedback */
     }
 
     th {
@@ -278,6 +304,10 @@ tr:hover {
         text-decoration: underline;
     }
 
+    tr:hover {
+        background-color: #000;
+    }
+
     .footer {
         background-color: #444;
         border-top: 4px solid #999;
@@ -295,5 +325,24 @@ tr:hover {
         color: white;
     }
 
+    #home a:focus{
+        outline: 2px solid white;
+    }
 
 }
+
+@media screen and (min-width: 750px){
+ 
+    #athlete-table thead tr th:last-child{
+        display: table-cell;
+    }
+    
+    #athlete-table tbody tr td:last-child{
+        display: table-cell;
+    }
+
+    #prof_pic{
+        height: 700px;
+        width: 700px;
+    }
+  }

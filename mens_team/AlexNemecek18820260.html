@@ -10,6 +10,7 @@
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Andika:ital,wght@0,400;0,700;1,400;1,700&family=Jacques+Francois&family=Oxanium:wght@200..800&display=swap" rel="stylesheet">
 
+      <link href="../dist/css/lightbox.css" rel="stylesheet">
       <link rel = "stylesheet" href = "../css/reset.css">
       <link rel = "stylesheet" href = "../css/style.css">
       
@@ -33,7 +34,9 @@
          <section id="athlete_name">
             <!--Athlete would input headshot-->
             <h2>Alex Nemecek</h2>
-            <img src="../images/profiles/18820260.jpg" alt="Athlete headshot" width="200"> 
+            <a href = "../images/profiles/18820260.jpg" target="_blank" data-lightbox="athlete" data-title="Alex Nemecek" data-alt="Athlete headshot" aria-label="Athlete Headshot" id="light">
+               <img src="../images/profiles/18820260.jpg" alt="Athlete headshot" width="200" id="prof_pic"> 
+            </a>
          </section>
       </div>
          <main id = "main">
@@ -306,6 +309,8 @@
             <a href = "https://www.instagram.com/a2skylinexc/">Follow us on Instagram <i class="fa-brands fa-instagram" aria-label="Instagram"></i></a>
          </footer>
       </div>
+      <script src="../dist/js/lightbox-plus-jquery.js"></script>
+      <script src="../js/replace.js"></script>
    </body>
    </html>
    

@@ -10,10 +10,9 @@
 
 
     <script src="https://kit.fontawesome.com/7703f3cfbe.js" crossorigin="anonymous"></script>
+    <link href="dist/css/lightbox.css" rel="stylesheet">
     <link rel = "stylesheet" href = "css/reset.css">
     <link rel = "stylesheet" href = "css/style.css">
-    <script src="dropdown.js" defer></script>
-
     
     <title>Home Page</title>
 </head>
@@ -26,7 +25,9 @@
         </header>
         <main>
         <div class="image">
-            <img src="images/homepage_image.webp" alt="runners"/>
+            <a href = "images/homepage_image.webp" target="_blank" data-lightbox="run" data-title="PROGRUN Runners" data-alt="runners">
+                <img src="images/homepage_image.webp" alt="runners"/>
+            </a>
         </div>
         <div class="container">
             <div class="dropdown">
@@ -77,6 +78,12 @@
 </ul>
 
 
+
+
+
+
+
+
             <!-- Dropdown content will be added here by the Python script -->
             </div>
         </div>
@@ -91,6 +98,9 @@
         <a href = "https://www.instagram.com/a2skylinexc/">Follow us on Instagram <i class="fa-brands fa-instagram" aria-label="Instagram"></i></a>
      </footer>
     </div>
+    <script src="dist/js/lightbox-plus-jquery.js"></script>
+    <script src="js/dropdown.js"></script>
+    <script src="js/replace.js"></script>
 </body>
 </html>
 
